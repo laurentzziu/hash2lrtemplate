@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Florinel Gorgan"]
   spec.email         = ["florin@floringorgan.com"]
 
-  spec.summary       = %q{Convert Hash objects to strings formatted as .lrtemplate (Adobe Lightroom) files.}
+  spec.summary       = %q{Convert Hash objects to .lrtemplate strings.}
   spec.description   = %q{Convert Hash objects to strings formatted as .lrtemplate (Adobe Lightroom) files.}
   spec.homepage      = "https://github.com/laurentzziu/hash2lrtemplate"
   spec.license       = "MIT"
