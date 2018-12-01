@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/laurentzziu/hash2lrtemplate.svg?branch=master)](https://travis-ci.org/laurentzziu/hash2lrtemplate)
+
 # Hash2lrtemplate
 
 Convert Hash objects to strings formatted as `.lrtemplate` (Adobe Lightroom) files.
