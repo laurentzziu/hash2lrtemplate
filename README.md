@@ -1,5 +1,7 @@
 # Hash2lrtemplate
 
+Convert Hash objects to strings formatted as `.lrtemplate` (Adobe Lightroom) files.
+
 ## Installation
 
 Add this line to your application's Gemfile:
