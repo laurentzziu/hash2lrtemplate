@@ -27,6 +27,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
+  hash2lrtemplate!
   rake (~> 10.0)
   rspec (~> 3.0)
 
