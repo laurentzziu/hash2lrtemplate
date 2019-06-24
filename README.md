@@ -6,7 +6,7 @@
 
 # Hash2lrtemplate
 
-Convert Hash objects to strings formatted as `.lrtemplate` (Adobe Lightroom) files.
+Convert `Hash` objects to strings formatted as `.lrtemplate` (Adobe Lightroom) files.
 
 ## Installation
 
