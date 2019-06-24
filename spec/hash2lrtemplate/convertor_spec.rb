@@ -36,8 +36,8 @@ RSpec.describe Hash2lrtemplate::Convertor do
         expect { described_class.new }.to raise_error(ArgumentError)
       end
 
-      it 'raises `StandardError` with message when provided object is not a `Hash`' do
-        expect { described_class.new(nil) }.to raise_error(StandardError, /Invalid Class/i)
+      it 'raises `Hash2lrtemplate::Error` with message when provided object is not a `Hash`' do
+        expect { described_class.new(nil) }.to raise_error(Hash2lrtemplate::Error, /Invalid Class/i)
       end
     end
 
@@ -76,7 +76,7 @@ RSpec.describe Hash2lrtemplate::Convertor do
 
       context 'when testing private methods' do
         it 'doesn\'t respond to `#convert`' do
-          expect(empty_described_instance).not_to respond_to(:convert)
+          expect(empty_described_instance).not_to respond_to(:convert_hash)
         end
       end
     end

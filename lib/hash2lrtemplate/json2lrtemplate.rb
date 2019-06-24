@@ -2,14 +2,12 @@
 
 module Hash2lrtemplate
   class JSON2lrtemplate
+    include CallableClass
+
     attr_reader :json_string
 
-    def self.call(json_string)
-      new(json_string).call
-    end
-
     def initialize(json_string)
-      raise(StandardError, 'Invalid class. Expected class: `String`') unless json_string.is_a?(String)
+      raise Hash2lrtemplate::Error, 'Invalid class. Expected class: `String`' unless json_string.is_a?(String)
 
       @json_string = json_string
     end

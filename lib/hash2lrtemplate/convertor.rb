@@ -4,14 +4,12 @@ require 'json'
 
 module Hash2lrtemplate
   class Convertor
+    include CallableClass
+
     attr_reader :hash
 
-    def self.call(hash)
-      new(hash).call
-    end
-
     def initialize(hash)
-      raise(StandardError, 'Invalid class. Expected class: `Hash`.') unless hash.is_a?(Hash)
+      raise Hash2lrtemplate::Error, 'Invalid class. Expected class: `Hash`.' unless hash.is_a?(Hash)
 
       @hash = hash
     end

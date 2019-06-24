@@ -37,8 +37,8 @@ RSpec.describe Hash2lrtemplate::JSON2lrtemplate do
         expect { described_class.new }.to raise_error(ArgumentError)
       end
 
-      it 'raises `StandardError` with message when provided object is not a `String`' do
-        expect { described_class.new(nil) }.to raise_error(StandardError, /Invalid Class/i)
+      it 'raises `Hash2lrtemplate::Error` with message when provided object is not a `String`' do
+        expect { described_class.new(nil) }.to raise_error(Hash2lrtemplate::Error, /Invalid Class/i)
       end
     end
 
