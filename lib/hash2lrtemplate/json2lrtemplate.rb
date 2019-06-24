@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 
 module Hash2lrtemplate
+  # Transformations:
+  #
+  # - Transform +"keys"+ to +keys+ (remove quotes)
+  # - Transform +[]+ to +{}+
+  # - Transform +:+ to +=+
+  # - Remove leading and ending +{}+
+  # - +,+ before closing +}+
   class JSON2lrtemplate
     include CallableClass
 
@@ -12,19 +19,16 @@ module Hash2lrtemplate
       @json_string = json_string
     end
 
+    #
+    # Convert from JSON to +.lrtemplate+ format
+    #
+    # @return [String] Converted string
+    #
     def call
       convert
     end
 
     private
-
-    # Transform `"keys"` to `keys` (remove quotes)
-    # Transform `[]` to `{}` - works for values on the same line?
-    # Transform `:` to `=`
-    # Remove leading and ending `{}`
-    # `,` before closing `}`
-    #
-    # @return [String]
 
     def convert
       @json_string.gsub(/"(\w+)"(?=:)/) { |_| $1.camelize(false) }

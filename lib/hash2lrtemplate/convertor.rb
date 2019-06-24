@@ -14,6 +14,11 @@ module Hash2lrtemplate
       @hash = hash
     end
 
+    #
+    # Converts the hash to JSON and call {Hash2lrtemplate::JSON2lrtemplate.call}
+    #
+    # @return [String] Converted string
+    #
     def call
       convert
     end
