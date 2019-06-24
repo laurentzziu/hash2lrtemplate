@@ -1,4 +1,8 @@
 [![Build Status](https://travis-ci.org/laurentzziu/hash2lrtemplate.svg?branch=master)](https://travis-ci.org/laurentzziu/hash2lrtemplate)
+[![Gem Version](https://badge.fury.io/rb/hash2lrtemplate.svg)](https://rubygems.org/gems/hash2lrtemplate)
+[![Maintainability](https://api.codeclimate.com/v1/badges/2b822e7586dae7602550/maintainability)](https://codeclimate.com/github/laurentzziu/hash2lrtemplate/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/2b822e7586dae7602550/test_coverage)](https://codeclimate.com/github/laurentzziu/hash2lrtemplate/test_coverage)
+
 
 # Hash2lrtemplate
 
