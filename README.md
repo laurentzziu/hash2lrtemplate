@@ -26,6 +26,35 @@ Or install it yourself as:
 
 ## Usage
 
+### Call the convertor
+
+```ruby
+hash = {
+  s: {
+    id: "635D4B13-0693-458A-9EA3-9B0FE599A2E3",
+    internal_name: "Hash2lrtemplate test demo",
+    title: "Hash2lrtemplate test demo",
+    type: "Develop",
+    value: {
+      uuid: "DA481B09-FABA-4551-A981-08C13F519C07",
+      settings: {
+        Blacks2012: -20,
+        Tint: 10,
+        ConvertToGrayscale: false,
+        CameraProfile: "Adobe Standard",
+        ToneCurvePV2012Red: [0, 0, 57, 40, 144, 147, 196, 206, 255, 255]
+      }
+    },
+    version: 0
+  }
+}
+
+Hash2lrtemplate::Convertor.new(hash).call
+# or call the .call method directly on the class
+Hash2lrtemplate::Convertor.call(hash)
+#  => "s = {id = \"635D4B13-0693-458A-9EA3-9B0FE599A2E3\",internalName = \"Hash2lrtemplate test demo\",title = \"Hash2lrtemplate test demo\",type = \"Develop\",value = {uuid = \"DA481B09-FABA-4551-A981-08C13F519C07\",settings = {Blacks2012 = -20,Tint = 10,ConvertToGrayscale = false,CameraProfile = \"Adobe Standard\",ToneCurvePV2012Red = {0,0,57,40,144,147,196,206,255,255,},},},version = 0,}"
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
