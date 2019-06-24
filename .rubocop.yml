@@ -1,4 +1,10 @@
-Style/Documentation:
+inherit_from: https://raw.githubusercontent.com/laurentzziu/utils/master/gems/.rubocop.yml
+require:
+  - rubocop-performance
+  - rubocop-rspec
+RSpec/InstanceVariable:
   Enabled: false
-Metrics/LineLength:
-  Max: 120
+RSpec/BeforeAfterAll:
+  Enabled: false
+RSpec/NestedGroups:
+  Enabled: false
